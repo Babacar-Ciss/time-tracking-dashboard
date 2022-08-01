@@ -1,0 +1,25 @@
+.App {
+  max-width: 1110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10%;
+
+
+  display: grid;
+  grid-template-columns: repeat(4, 255px);
+  grid-template-rows: repeat(2, 244px) ;
+  row-gap: 30px;
+  column-gap: 30px;
+}
+
+@media (min-width : 375px) and (max-width : 1440px) {
+    .App {
+      grid-template-columns: 327px;
+      grid-template-rows: 203px repeat(6, 160px) ;
+      row-gap: 24px;
+      column-gap: 0;
+    }
+}
+

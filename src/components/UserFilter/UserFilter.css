@@ -1,0 +1,34 @@
+.user-filter > * {
+    color :#7078C9;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: auto;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.user-filter > :hover {
+    color :#FFF;
+}
+
+.active {
+color: #FFF;
+transition: all 2s;
+}
+
+
+@media (min-width : 375px) and (max-width : 1440px) {
+    .user-filter {
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 0px;
+        padding-left: 30px;
+        padding-right: 25px;
+    }
+
+    .user-filter > * {
+        margin-right: 0px
+    }
+}
