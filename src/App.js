@@ -1,7 +1,8 @@
 import './App.css';
 import Activities from './components/Activities/Activities';
 import User from './components/User/User';
-import { useState, useRef, useEffect} from "react"; 
+import { useState } from "react";
+import {motion, LayoutGroup} from "framer-motion" 
 
 function App() {
   const [frequency, SetFrequency] = useState("weekly")

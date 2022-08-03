@@ -1,7 +1,7 @@
 import "./Activities.css";
 import datas from "../../../src/data/data.json";
 import IMAGES from "../../assets/images";
-import {useref} from "react";
+import {motion} from "framer-motion"
 
 const Activities = ({frequency}) => {
     console.log(datas);
@@ -86,10 +86,14 @@ const Activities = ({frequency}) => {
 
     
     const MappingDatas = datas.map((data, index) => (
-        <div className="Activities" key={`${data.title}${index}`} style={{backgroundColor: `${colorschoiceHandler(data.title.toLowerCase())}`,
+        <motion.div className="Activities" key={`${data.title}${index}`} 
+                                           layout
+                                           initial = {{opacity : 0}}
+                                           animate = {{opacity : 1}}
+                                           transition = {{duration : 1, delay : 0.5, layout : {duration : 2}}}
+                                           style={{backgroundColor: `${colorschoiceHandler(data.title.toLowerCase())}`,
                                                                           backgroundImage: `url(${iconschoiceHandler(data.title.toLowerCase())})`
                                                                         }}>  
-
         <div className="activities-container">
             <div className="activities-details">
                 <p className="activities-title">{data.title}</p>
@@ -99,7 +103,7 @@ const Activities = ({frequency}) => {
                 <img className="activities-logo" src={IMAGES.iconEllipsis} alt="Ellipsis dot image" />
             </div>
         </div>
-    </div>
+    </motion.div>
     ))
    
 
